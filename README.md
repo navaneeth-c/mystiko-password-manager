@@ -15,6 +15,11 @@ rather than saved. Full write-up: [IWS1-FINAL REPORT.pdf](IWS1-FINAL%20REPORT.pd
 > purpose-built password KDF (scrypt, Argon2, PBKDF2) with a per-site salt is the
 > right primitive, and the fixed derivation makes rotating a single site's password
 > impossible without changing the master key. Left as written.
+>
+> **Credit:** the stateless derive-don't-store design and the hash-iteration scheme
+> follow [Hashpass](https://github.com/stepchowfun/hashpass) by Stephan Boyer, which
+> this course project was built from. An earlier revision of this README linked
+> Hashpass's store page in the install instructions without saying so.
 
 ---
 
@@ -24,7 +29,7 @@ The main advantage of this tool is, it is stateless. That means, there is no ser
 
 ## Installation
 
-Install Mystiko from the Chrome App Store ([link](https://chrome.google.com/webstore/detail/hashpass/gkmegkoiplibopkmieofaaeloldidnko)). You will then see the Mystiko icon next to your address bar.
+Install Mystiko from the Chrome Web Store ([link](https://chrome.google.com/webstore/detail/mystiko/elgebokhcmefncfkfejmgdppipfhjgeh)). You will then see the Mystiko icon next to your address bar.
 
 ## Compatible implementations
 
