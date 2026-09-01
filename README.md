@@ -1,6 +1,22 @@
-# IWS
-Internet and Web Systems - UMass Lowell
-# Mystiko
+> **Archived academic project — UMass Lowell, Fall 2018.**
+> Kept for the record, not maintained. Written during my MS in Computer Science;
+> it reflects what I was learning then, not how I write code today.
+> Current work: [k8s-slo-lab](https://github.com/navaneeth-c/k8s-slo-lab)
+
+# Mystiko — stateless password manager
+
+Course project for **91.513 Internet and Web Systems**, UMass Lowell, Fall 2018.
+A Chrome extension that derives a unique password per site from one master key,
+with no server and nothing stored anywhere — the password is recomputed on demand
+rather than saved. Full write-up: [IWS1-FINAL REPORT.pdf](IWS1-FINAL%20REPORT.pdf).
+
+> Note, in hindsight: the scheme below iterates a plain hash 2^16 times. That was
+> a reasonable student answer in 2018, but it is not what you would ship — a
+> purpose-built password KDF (scrypt, Argon2, PBKDF2) with a per-site salt is the
+> right primitive, and the fixed derivation makes rotating a single site's password
+> impossible without changing the master key. Left as written.
+
+---
 
 [Mystiko](https://chrome.google.com/webstore/detail/mystiko/elgebokhcmefncfkfejmgdppipfhjgeh) is a Chrome extension designed to make passwords management easier. It will automatically generate a unique and secure password for every website and it is going to be different for each website that makes your passwords more secure.
 
